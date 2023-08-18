@@ -1,0 +1,125 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #aaa;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(45deg, #010758, #490d61);
+}
+.container h4{
+  font-size: 35px;
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+.heading {
+  background-image: linear-gradient(45deg, #b6b9de, #6b1651, #a90a57);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.container :where(textarea, input, select, button) {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.container :where(textarea, input)::placeholder {
+  color: #aaa;
+}
+
+.container :where(textarea, input):focus {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.container textarea {
+  height: 270px;
+  resize: none;
+  padding: 8px 13px;
+  font-size: 17.6px;
+  border: none;
+  background-color: #403d84;
+  box-shadow: 5px 5px 11px whitesmoke;
+}
+
+.container .file-options {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-options .option {
+  width: calc(100% / 2 - 8px);
+}
+
+.option :where(input, .menu) {
+  height: 50px;
+  padding: 0 13px;
+  margin-top: 6px;
+  border-radius: 50px;
+  border: none;
+  background-color: #403d84;
+}
+
+.option .menu select {
+  height: 50px;
+  background-color: #403d84;
+}
+
+.container .button1 {
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.6;
+  padding: 16px 0;
+  margin-top: 20px;
+  pointer-events: none;
+  background: #ff2963;
+  border-radius: 50px;
+}
+
+.button1:hover {
+  background-color: #403d84;
+}
+
+textarea:valid~.button1 {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 475px) {
+
+  .container {
+    padding: 25px 18px 30px;
+  }
+
+  .container :where(textarea, input, select, button) {
+    font-size: 16px !important;
+  }
+
+  .file-options .option {
+    width: calc(100% / 2 - 5px);
+  }
+
+  .option :where(input, .menu) {
+    padding: 0 10px;
+  }
+
+  .container .button1 {
+    padding: 15px 0;
+  }
+}
